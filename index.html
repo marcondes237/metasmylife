@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa do Futuro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="map-app">
+      <section class="map-hero">
+        <div class="title-block">
+          <span>Mapa do futuro</span>
+          <h1>Escolha sua proxima parada</h1>
+        </div>
+        <p>O relogio marca o agora. As estacoes marcam os objetivos.</p>
+      </section>
+
+      <section class="journey-map" aria-label="Mapa interativo de objetivos">
+        <svg class="route-lines" viewBox="0 0 1000 620" aria-hidden="true">
+          <path d="M130 415 C230 250 350 190 500 310 C650 430 770 310 875 175" />
+          <path d="M170 165 C300 95 430 170 500 310 C570 450 710 520 860 420" />
+        </svg>
+
+        <button class="station station-enem" type="button" data-hour="1">
+          <small>01</small>
+          <strong>ENEM</strong>
+        </button>
+        <button class="station station-money" type="button" data-hour="4">
+          <small>04</small>
+          <strong>Financas</strong>
+        </button>
+        <button class="station station-stage" type="button" data-hour="6">
+          <small>06</small>
+          <strong>Estagio</strong>
+        </button>
+        <button class="station station-today" type="button" data-hour="8">
+          <small>08</small>
+          <strong>Hoje</strong>
+        </button>
+        <button class="station station-happy" type="button" data-hour="11">
+          <small>11</small>
+          <strong>Feliz</strong>
+        </button>
+
+        <section class="clock-island" aria-label="Relogio com objetivos clicaveis">
+          <canvas id="clockCanvas" width="680" height="680"></canvas>
+        </section>
+
+        <aside class="map-note">
+          <span>Rota ativa</span>
+          <strong>5 destinos</strong>
+          <p>Clique em uma estacao ou nos horarios coloridos do relogio.</p>
+        </aside>
+      </section>
+
+      <aside id="goalPanel" class="goal-popover" hidden aria-live="polite"></aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
